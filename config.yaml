@@ -1,5 +1,5 @@
 params:
-  epoch: 1
+  epoch: 3
   batch_size: 32
   no_classes: 10
   loss_function: sparse_categorical_crossentropy
@@ -11,6 +11,7 @@ artifacts:
   artifacts_dir: artifacts
   model_dir: model
   plots_dir: plot
+  plot_name: plot.png
   checkpoints_dir: checkpoint
   model_name: ann_model.h5
 
