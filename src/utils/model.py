@@ -1,4 +1,7 @@
 import tensorflow as tf
+import time as time
+
+import os
 
 def create_model(loss, optimizer, metrics):
     
@@ -20,3 +23,12 @@ def create_model(loss, optimizer, metrics):
     model_clf.compile(optimizer=OPTIMIZER, loss=LOSS, metrics=METRICS)
     
     return model_clf #<< untrained model
+
+def get_uniq_filename(filename):
+    uniq_filename = time.strftime(f"%Y-%m-%dT%H:%S_{filename}")
+    return uniq_filename
+
+def save_model(model, model_name,model_dir):
+    uniq_filename = get_uniq_filename(model_name)
+    path_to_model = os.path.join(model_dir,uniq_filename)
+    model.save(path_to_model)

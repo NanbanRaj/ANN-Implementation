@@ -12,6 +12,7 @@ artifacts:
   model_dir: model
   plots_dir: plot
   checkpoints_dir: checkpoint
+  model_name: ann_model.h5
 
 logs:
   logs_dir: logs_dir
